@@ -9,5 +9,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-app';
+  title = 'angular-app';// this is property we can not define the variable directly inside class
+  hello() {
+    let c = 10;//making my variable
+  }
 }
