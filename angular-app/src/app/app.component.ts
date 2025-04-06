@@ -16,4 +16,12 @@ export class AppComponent {
   hello() {
     let c = 10;//making my variable
   }
+  clickmebtn() {
+    //console.log("function for the button cick");
+    this.anotherfunc();//calling another function of same class using this keyword
+  }
+  anotherfunc() {
+    console.log("function for the button cick");
+
+  }
 }
