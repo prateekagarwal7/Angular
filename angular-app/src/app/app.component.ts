@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { Profile } from './profile/profile.component';
+import { CounterComponent } from './counter/counter.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoginComponent, Profile],//importing the login component
+  imports: [RouterOutlet, LoginComponent, Profile, CounterComponent],//importing the login component
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
