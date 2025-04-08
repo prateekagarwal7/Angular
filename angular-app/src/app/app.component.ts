@@ -30,4 +30,7 @@ export class AppComponent {
     console.log("function for the button cick");
 
   }
+  eventhandler(event: any) {
+    console.log(event);
+  }
 }
