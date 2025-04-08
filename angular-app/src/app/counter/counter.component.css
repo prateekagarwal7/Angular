@@ -1,0 +1,19 @@
+.btn{
+    height:80px;
+    width:80px;
+    border-radius:50%;
+    color:white;
+    margin:10px
+}
+.btn-red{
+    background-color:red;
+}
+.btn-black {
+  background-color: black;
+}
+.btn-green {
+  background-color: green;
+}
+div{
+    text-align:center;
+}

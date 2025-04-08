@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './counter.component.css'
 })
 export class CounterComponent {
-
+  value = 0;
+  increment() {
+    this.value += 1;
+  }
+  reset() {
+    this.value = 0;
+  }
+  decrement() {
+    this.value -= 1;
+  }
 }
