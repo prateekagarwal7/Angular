@@ -10,6 +10,7 @@ import { CounterComponent } from './counter/counter.component';
   imports: [RouterOutlet, LoginComponent, Profile, CounterComponent],//importing the login component
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
+  //styleUrls:['',''] if we have more than one fine for styling of the componet
 })
 export class AppComponent {
   title = 'angular-app';// this is property we can not define the variable directly inside class
