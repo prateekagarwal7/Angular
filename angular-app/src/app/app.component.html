@@ -11,10 +11,15 @@
 
 <!--example for templte reference variable-->
 <h2>Email : {{email}}</h2>
-<input type="text" placeholder="type email" #emailField/>
+<input type="text" placeholder="type email" #emailField />
 <button (click)="getValue(emailField.value)">click</button>
 <!--
 limitations of extrapolation
  <h1>{{var x}}    invalid
  no use of increment and decrement operator
 </h1>-->
+@if(dispaly){
+<h1>if statement executed</h1>
+}@else{
+<h1>else statement executed</h1>}
+<button (click)="status()">toggle</button>
