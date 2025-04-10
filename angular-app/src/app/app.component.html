@@ -8,6 +8,11 @@
 <app-profile></app-profile>
 <app-counter></app-counter>
 <button (click)="eventhandler($event)">button for event</button>
+
+<!--example for templte reference variable-->
+<h2>Email : {{email}}</h2>
+<input type="text" placeholder="type email" #emailField/>
+<button (click)="getValue(emailField.value)">click</button>
 <!--
 limitations of extrapolation
  <h1>{{var x}}    invalid

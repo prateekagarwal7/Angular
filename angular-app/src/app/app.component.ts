@@ -17,6 +17,7 @@ export class AppComponent {
   surname: string = "prateek";// this is ised to assing the data type to properties
   address: string | number = "rrr";// either of the two specifies data type can be put inside it
   others: any;//any data type can be put inside it
+  email: string | undefined="";
   hello() {
     let c = 10;//making my variable
     this.others = true;
@@ -32,5 +33,8 @@ export class AppComponent {
   }
   eventhandler(event: any) {
     console.log(event);
+  }
+  getValue(email: string) {
+    this.email = email;
   }
 }
