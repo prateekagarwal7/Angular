@@ -13,6 +13,16 @@ import { CounterComponent } from './counter/counter.component';
   //styleUrls:['',''] if we have more than one fine for styling of the componet
 })
 export class AppComponent {
+  students = [
+    {
+      age: 21,
+      name: 'prateek',
+    },
+    {
+      age: 23,
+      name:'anil'
+    }
+  ]
   title = 'angular-app';// this is property we can not define the variable directly inside class
   age = 10;
   surname: string = "prateek";// this is ised to assing the data type to properties
