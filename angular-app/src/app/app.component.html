@@ -22,10 +22,12 @@ limitations of extrapolation
 }@else{
 <h1>else statement executed</h1>}
 <button (click)="status()">toggle</button>
-@for (student of students; track student.name; let id = $index){<!--//index is type of reserved keywork word which are being representd by use of $--> 
+@for (student of students; track student.name; let id = $index){<!--//index is type of reserved keywork word which are being representd by use of $-->
 
 <h2>{{id}}</h2>
 <h2>{{student.name}}</h2>
-<h1>{{x}}</h1>
-<h1>{{x()}}</h1>
+
 }
+<!--<h1>{{x}}</h1>-->
+<h1>{{x()}}</h1>
+<button (click)="x.set(100)">setting signal</button>
