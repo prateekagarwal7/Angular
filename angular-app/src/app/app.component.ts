@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, effect, signal, WritableSignal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { Profile } from './profile/profile.component';
@@ -23,7 +23,9 @@ export class AppComponent {
       name:'anil'
     }
   ]
-  x = signal(10);
+  x = signal<number | string>(10);//definignt the typpe of value that can be given to a signal
+  y: WritableSignal<number|string> = signal("hello")// this is the writable signal
+  //update method is similar to use as that of set method x.set((val)=>val+1) instead of set we can use update but there is limitation for using update there must a fixed data type of value that is passed in signal
   constructor() {
     effect(()=>{
       console.log(this.x());
