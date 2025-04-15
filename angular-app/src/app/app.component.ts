@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { Profile } from './profile/profile.component';
@@ -29,6 +29,7 @@ export class AppComponent {
   address: string | number = "rrr";// either of the two specifies data type can be put inside it
   others: any;//any data type can be put inside it
   email: string | undefined = "";
+  x = signal(10);
   dispaly = true;
   hello() {
     let c = 10;//making my variable
