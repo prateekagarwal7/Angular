@@ -33,3 +33,11 @@ limitations of extrapolation
 <button (click)="x.set(100)">setting signal</button>
 <h1>{{result()}}</h1>
 <button (click)="computedsignal()">example of computed signal</button>
+@for(name of names;track name;let i = $index; let f = $first; let l = $last)
+{
+@if(f||l){<h2 style="background-color:aquamarine;">{{name}} and {{i}}</h2>}
+@else if($odd){<h2 style="background-color:cadetblue;">{{name}} and {{i}}</h2>}
+@else if($even){<h2 style="background-color:darkturquoise;">{{name}} and {{i}}</h2>}
+<h2>{{$count}}</h2>
+}@empty(){ <!--this act as else statement in for loop which means no data in list-->
+<h2>no records</h2>}
