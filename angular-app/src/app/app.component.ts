@@ -1,4 +1,4 @@
-import { Component, effect, signal, WritableSignal } from '@angular/core';
+import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { Profile } from './profile/profile.component';
@@ -37,7 +37,9 @@ export class AppComponent {
   address: string | number = "rrr";// either of the two specifies data type can be put inside it
   others: any;//any data type can be put inside it
   email: string | undefined = "";
-
+  a = signal(10);
+  b = signal(20);
+  result = computed(() => this.a() + this.b());
   dispaly = true;
   hello() {
     let c = 10;//making my variable
@@ -61,4 +63,9 @@ export class AppComponent {
   status() {
     this.dispaly = !this.dispaly;
   }
+  computedsignal() {
+    this.a.set(100);
+
+  }
+
 }
