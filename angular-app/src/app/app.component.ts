@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { Profile } from './profile/profile.component';
 import { CounterComponent } from './counter/counter.component';
+import { FormsModule } from '@angular/forms'
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoginComponent, Profile, CounterComponent],//importing the login component
+  imports: [RouterOutlet, LoginComponent, Profile, CounterComponent, FormsModule],//importing the login component
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
   //styleUrls:['',''] if we have more than one fine for styling of the componet
@@ -23,6 +24,7 @@ export class AppComponent {
       name:'anil'
     }
   ]
+  agex = 10;
   names = ['anil', 'prateek', 'vibhu', 'siva', 'dashrath', 'paddy'];
   x = signal<number | string>(10);//definignt the typpe of value that can be given to a signal
   y: WritableSignal<number|string> = signal("hello")// this is the writable signal
