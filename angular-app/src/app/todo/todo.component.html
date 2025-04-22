@@ -1,1 +1,8 @@
 <p>todo works!</p>
+<input type="text" placeholder="enter the task" [(ngModel)]="task" />
+<button (click)="add()">add</button>
+@for(task of taskList; track task.id){
+  <li>{{task.id}} {{task.task}} <button (click)="delete(task.id)">delete</button></li>
+}@empty(){
+<p>no task is empty</p>
+}
