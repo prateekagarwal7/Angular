@@ -8,3 +8,6 @@
 }
 <h1 [style.backgroundColor]="value?color:'green'">dynamic</h1>
 <button (click)="changecolor()">change color</button>
+<br />
+<a herf="/" *ngIf="login; else elseblock">login</a>
+<ng-template #elseblock><a herf="/">logout</a></ng-template>
