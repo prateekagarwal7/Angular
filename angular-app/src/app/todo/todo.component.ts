@@ -9,7 +9,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './todo.component.css'
 })
 export class TodoComponent {
-  task:string = "";
+  task: string = "";
+  color = 'red';
+  value = true;
   taskList: { id: number, task: string }[] = []//making the list of object type
   add() {
     this.taskList.push({ id: this.taskList.length + 1, task: this.task })//example of pushing a object in the list
@@ -17,5 +19,8 @@ export class TodoComponent {
   } delete(taskid: number) {
     this.taskList = this.taskList.filter((item) => item.id != taskid);
 
+  }
+  changecolor() {
+    this.value = !this.value;
   }
 }
