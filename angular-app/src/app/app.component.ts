@@ -1,15 +1,17 @@
 import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { Profile } from './profile/profile.component';
 import { CounterComponent } from './counter/counter.component';
 import { FormsModule } from '@angular/forms'
 import { TodoComponent } from './todo/todo.component';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoginComponent, Profile, CounterComponent, FormsModule, TodoComponent],//importing the login component
+  imports: [RouterOutlet, LoginComponent, Profile, CounterComponent, FormsModule, TodoComponent, HomeComponent, RouterOutlet, HeaderComponent],//importing the login component
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
   //styleUrls:['',''] if we have more than one fine for styling of the componet
