@@ -4,6 +4,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ContactComponent } from './contact/contact.component';
 
 
-export const routes: Routes = [{ path: 'Home', component: HomeComponent },
+export const routes: Routes = [{ path: 'Home', data: { name: 'cwhw' } ,component: HomeComponent},
   { path: 'contact', component: ContactComponent },
 { path: '**', component: PageNotFoundComponent }];
