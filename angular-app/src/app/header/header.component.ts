@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +9,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+  name="pqwe"
+  constructor(private route:Router) { }
+  contactclick() {
+    this.route.navigate(['contact'], { queryParams: { name: 'prt'} })
+  }
 }

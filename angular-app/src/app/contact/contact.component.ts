@@ -15,6 +15,9 @@ export class ContactComponent {
   }
   ngOnInit(): void {
     this.username = this.route.snapshot.paramMap.get('name');
+    this.route.queryParams.subscribe(params => {
+      this.username = params['name'];
+    })
   }
 
 }
