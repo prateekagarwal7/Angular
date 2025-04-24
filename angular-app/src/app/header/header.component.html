@@ -4,6 +4,9 @@
     <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/Home">Home</a>
   </li>
   <li>
+    <a [routerLink]="['/contact',{name:'arun'}]" routerLinkActive="active">Contact</a>
+  </li>
+  <li>
     <a routerLink="/xyx">it must show page not found</a>
   </li>
 </ul>
