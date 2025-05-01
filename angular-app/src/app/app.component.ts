@@ -7,11 +7,12 @@ import { FormsModule } from '@angular/forms'
 import { TodoComponent } from './todo/todo.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
+import { DynamicRouteComponent } from './dynamic-route/dynamic-route.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoginComponent, Profile, CounterComponent, FormsModule, TodoComponent, HomeComponent, RouterOutlet, HeaderComponent],//importing the login component
+  imports: [RouterOutlet, LoginComponent, Profile, CounterComponent, FormsModule, TodoComponent, HomeComponent, RouterOutlet, HeaderComponent, DynamicRouteComponent],//importing the login component
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
   //styleUrls:['',''] if we have more than one fine for styling of the componet
