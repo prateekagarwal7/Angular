@@ -1,6 +1,8 @@
 <p>this is the usage of the form group</p>
 <form [formGroup]="profile" (submit)="submitted()">
   <input placeholder="enter the name" type="text"formControlName="name"/>
+  <span *ngIf="name?.hasError('required')">NAME IS REQUIRED</span>
+  <span *ngIf="name?.invalid && (name?.dirty || name?.touched)">please enter correct name</span>
   <br />
   <input placeholder="enter the age" type="number" formControlName="age"/>
   <br />
