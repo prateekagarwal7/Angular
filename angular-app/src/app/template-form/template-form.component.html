@@ -1,6 +1,7 @@
 <p>template-form works!</p>
-<form #userform="ngForm" (ngSubmit)="addDetails(userform.value)">
-  <input name="name" type="text" placeholder="enter name" ngModel />
+<form #userform="ngForm"  (ngSubmit)="addDetails(userform.value)">
+  <input #name="ngModel" name="name" type="text" required placeholder="enter name" ngModel />
+  <span *ngIf="name.invalid && name.touched">name is required</span>
   <br />
   <input type="password" placeholder="enter password" name="password" ngModel />
   <br />
@@ -11,5 +12,6 @@
   </select>
   <br />
   <input type="range" min="0"max="20" name="ramge" ngModel />
-  <button>submit</button>
+  <button [disabled]="userform.invalid">submit</button>
 </form>
+<!-- other properties are patterm="[a-z]+", email, minlength, maxlength-->
