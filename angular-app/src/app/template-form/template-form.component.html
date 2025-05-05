@@ -1,0 +1,15 @@
+<p>template-form works!</p>
+<form #userform="ngForm" (ngSubmit)="addDetails(userform.value)">
+  <input name="name" type="text" placeholder="enter name" ngModel />
+  <br />
+  <input type="password" placeholder="enter password" name="password" ngModel />
+  <br />
+  <select ngModel name="gender">
+    <option value="">select gender</option>
+    <option value="male">Male</option>
+    <option value="female">female</option>
+  </select>
+  <br />
+  <input type="range" min="0"max="20" name="ramge" ngModel />
+  <button>submit</button>
+</form>
