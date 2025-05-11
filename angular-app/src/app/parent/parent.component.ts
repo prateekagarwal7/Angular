@@ -10,5 +10,9 @@ import { ChildComponent } from '../child/child.component';
   styleUrl: './parent.component.css'
 })
 export class ParentComponent {
-  
+  user = "preet"
+  valuechange(x:string) {
+    this.user = x;
+  }
+
 }

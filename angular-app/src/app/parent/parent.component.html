@@ -1,2 +1,6 @@
 <p>parent works!</p>
-<app-child username="prateek"></app-child>
+<app-child [username]="user"></app-child>
+<select #selectvalue name="" id="" (change)="valuechange(selectvalue.value)">
+  <option value="anil">anil</option>
+  <option value="sam">sam</option>
+</select>
