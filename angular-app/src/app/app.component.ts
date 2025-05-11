@@ -12,11 +12,12 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FormGroupComponent } from './form-group/form-group.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ParentComponent } from './parent/parent.component';
+import { CurrencyconvertorPipe } from './pipes/currencyconvertor.pipe';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoginComponent, Profile, CounterComponent, FormsModule, TodoComponent, HomeComponent, RouterOutlet, HeaderComponent, DynamicRouteComponent, ReactiveFormComponent, FormGroupComponent, TemplateFormComponent, ParentComponent],//importing the login component
+  imports: [RouterOutlet, LoginComponent, Profile, CounterComponent, FormsModule, TodoComponent, HomeComponent, RouterOutlet, HeaderComponent, DynamicRouteComponent, ReactiveFormComponent, FormGroupComponent, TemplateFormComponent, ParentComponent, CurrencyconvertorPipe],//importing the login component
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
   //styleUrls:['',''] if we have more than one fine for styling of the componet
@@ -78,5 +79,6 @@ export class AppComponent {
     this.a.set(100);
 
   }
+  amount=20
 
 }
