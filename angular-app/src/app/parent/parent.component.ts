@@ -14,5 +14,8 @@ export class ParentComponent {
   valuechange(x:string) {
     this.user = x;
   }
+  handleuser(user:string) {
+    console.log(user)
+  }
 
 }

@@ -1,5 +1,5 @@
 <p>parent works!</p>
-<app-child [username]="user"></app-child>
+<app-child [username]="user" (getuser)="handleuser($event)"></app-child><!--passing the function to child component -->
 <select #selectvalue name="" id="" (change)="valuechange(selectvalue.value)">
   <option value="anil">anil</option>
   <option value="sam">sam</option>
