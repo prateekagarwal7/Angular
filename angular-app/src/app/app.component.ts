@@ -41,7 +41,7 @@ export class AppComponent {
   //update method is similar to use as that of set method x.set((val)=>val+1) instead of set we can use update but there is limitation for using update there must a fixed data type of value that is passed in signal
   constructor(serviceex: ProductService) {
     effect(()=>{
-      console.log(this.x());
+      console.log(this.x());// this effect is done to capture the signal
     })
   }
   title = 'angular-app';// this is property we can not define the variable directly inside class
