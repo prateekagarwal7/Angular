@@ -13,6 +13,7 @@ import { FormGroupComponent } from './form-group/form-group.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ParentComponent } from './parent/parent.component';
 import { CurrencyconvertorPipe } from './pipes/currencyconvertor.pipe';
+import { ProductService } from './services/product.service';
 
 @Component({
   selector: 'app-root',
@@ -38,7 +39,7 @@ export class AppComponent {
   x = signal<number | string>(10);//definignt the typpe of value that can be given to a signal
   y: WritableSignal<number|string> = signal("hello")// this is the writable signal
   //update method is similar to use as that of set method x.set((val)=>val+1) instead of set we can use update but there is limitation for using update there must a fixed data type of value that is passed in signal
-  constructor() {
+  constructor(serviceex: ProductService) {
     effect(()=>{
       console.log(this.x());
     })
